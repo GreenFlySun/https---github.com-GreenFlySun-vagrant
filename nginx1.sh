@@ -1,6 +1,7 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 service nginx start
+sudo apt-get -y install net-tools
 
 sudo cat << EOF > /var/www/html/index.nginx-debian.html
 <!DOCTYPE html>
@@ -21,3 +22,4 @@ sudo cat << EOF > /var/www/html/index.nginx-debian.html
 <p>It's very PINK PAGE</p>
 </body>
 </html>
+EOF

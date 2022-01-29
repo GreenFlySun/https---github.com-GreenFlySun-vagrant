@@ -1,12 +1,13 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 service nginx start
+sudo apt-get -y install net-tools
 
 sudo cat << EOF > /var/www/html/index.nginx-debian.html
 <!DOCTYPE html>
 <html>
 <head>
-<tittle>It's a Blue page<tittle>
+<tittle>It's a LightBlue page<tittle>
 <style>
     body{
         widht:35em;
@@ -17,7 +18,8 @@ sudo cat << EOF > /var/www/html/index.nginx-debian.html
 </style>
 </head>
 <body>
-<h1>It's a Blue page for Stas</h1>
-<p>It's very BLUE PAGE</p>
+<h1>It's a LightBlue page for Stas</h1>
+<p>It's very LIGHTBLUE PAGE</p>
 </body>
 </html>
+EOF
