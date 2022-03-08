@@ -10,9 +10,11 @@ upstream backend_servers {
 }
     server {
     listen        8082;
+    listen        4443 ssl;
     server_name localhost;
-    return 301 https://localhost:8082
-    ssl           on;
+
+    return 301 https://$host:4443$request_uri
+    #ssl           on;
     ssl_certificate  /etc/nginx/ssl.crt;
     ssl_certificate_key /etc/nginx/ssl.key;
     location / {
