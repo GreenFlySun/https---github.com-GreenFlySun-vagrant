@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
     nginx_proxy.vm.provision "shell", path: "nginx_proxy.sh", run: 'always'
     nginx_proxy.vm.network "private_network", ip: "172.30.1.2", virtualbox__intnet: true
     nginx_proxy.vm.network "private_network", ip: "172.30.2.2", virtualbox__intnet: true
-    nginx_proxy.vm.network :forwarded_port, guest: 80, host: 8082, id:"nginx_proxy"
+    nginx_proxy.vm.network :forwarded_port, guest: 8082, host: 8082, id:"nginx_proxy"
     nginx_proxy.vm.synced_folder ".", "C:\VB\test"
 
   end
